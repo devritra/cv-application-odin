@@ -8,6 +8,7 @@ import { CompanyNameInput } from "./CompanyNameInput"
 import { PositionTitleInput } from "./PositionTitleInput"
 import { CompanyResponsibilityInput } from "./CompanyResponsibilityInput"
 import { CompanyJoiningDateInput } from "./CompanyJoiningDateInput"
+import { CompanyExitDateInput } from "./CompanyExitDate"
 export function FormHolder(
     {
         name,
@@ -20,6 +21,7 @@ export function FormHolder(
         positionTitle,
         companyResponsibility,
         companyJoiningDate,
+        companyExitDate,
         handleNameInputChanges,
         handleEmailInputChanges,
         handlePhoneInputChanges,
@@ -29,7 +31,8 @@ export function FormHolder(
         handleCompanyNameInputChanges,
         handlePositionTitleInputChanges,
         handleCompanyResponsibilityInputChanges,
-        handleCompanyJoiningDateInputChanges
+        handleCompanyJoiningDateInputChanges,
+        handleCompanyExitDateInputChanges
     }
 ){
     return(
@@ -76,6 +79,10 @@ export function FormHolder(
             <CompanyJoiningDateInput
                 companyJoiningDate={companyJoiningDate}
                 handleCompanyJoiningDateInputChanges={handleCompanyJoiningDateInputChanges}
+            />
+            <CompanyExitDateInput
+                companyExitDate={companyExitDate}
+                handleCompanyExitDateInputChanges={handleCompanyExitDateInputChanges}
             />
         </>
     )
