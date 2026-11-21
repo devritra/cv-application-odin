@@ -11,7 +11,8 @@ export function MainPage(){
         'School end date': '',
         'Company Name': '',
         'Position Title': '',
-        'Company Responsibility': ''
+        'Company Responsibility': '',
+        'Company joining date': ''
     }
     const [cvObj, setCvObj] = useState(cvTemplate);
     const handleNameInputChanges = (e) => {
@@ -41,6 +42,9 @@ export function MainPage(){
     const handleCompanyResponsibilityInputChanges = (e) => {
         setCvObj({...cvObj, 'Company Responsibility': e.target.value})
     }
+    const handleCompanyJoiningDateInputChanges = (e) => {
+        setCvObj({...cvObj, 'Company joining date': e.target.value})
+    }
     console.log(cvObj);
     
     return(
@@ -55,7 +59,8 @@ export function MainPage(){
                 schoolEndDate={cvObj['School end date']}
                 companyName={cvObj['Company Name']}
                 positionTitle={cvObj['Position Title']}
-                //companyResponsibility={cvObj['Company Responsibility']}
+                companyResponsibility={cvObj['Company Responsibility']}
+                companyJoiningDate={cvObj['Company joining date']}
                 handleNameInputChanges={handleNameInputChanges}
                 handleEmailInputChanges={handleEmailInputChanges}
                 handlePhoneInputChanges={handlePhoneInputChanges}
@@ -65,6 +70,7 @@ export function MainPage(){
                 handleCompanyNameInputChanges={handleCompanyNameInputChanges}
                 handlePositionTitleInputChanges={handlePositionTitleInputChanges}
                 handleCompanyResponsibilityInputChanges={handleCompanyResponsibilityInputChanges}
+                handleCompanyJoiningDateInputChanges={handleCompanyJoiningDateInputChanges}
             />
         </>
     )

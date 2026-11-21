@@ -3,7 +3,6 @@ export function CompanyResponsibilityInput({companyResponsibility,handleCompanyR
         <>
             <label htmlFor="companyResponsibilityInput">Main responsibilities you had in your company: </label>
             <textarea
-                type="textarea"
                 id="companyResponsibilityInput"
                 value={companyResponsibility}
                 onChange={handleCompanyResponsibilityInputChanges}
