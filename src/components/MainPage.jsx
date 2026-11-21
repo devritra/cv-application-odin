@@ -6,7 +6,8 @@ export function MainPage(){
         Name: '',
         Email: '',
         Phone: '',
-        SchoolName: ''
+        'School Name': '',
+        'School start date': ''
     }
     const [cvObj, setCvObj] = useState(cvTemplate);
     const handleNameInputChanges = (e) => {
@@ -19,7 +20,10 @@ export function MainPage(){
         setCvObj({...cvObj, Phone: e.target.value})
     }
     const handleSchoolNameInputChanges = (e) => {
-        setCvObj({...cvObj, SchoolName: e.target.value})
+        setCvObj({...cvObj, 'School Name': e.target.value})
+    }
+    const handleSchoolStartDateInputChanges = (e) => {
+        setCvObj({...cvObj, 'School start date': e.target.value})
     }
     console.log(cvObj);
     
@@ -30,11 +34,13 @@ export function MainPage(){
                 name={cvObj.Name}
                 email={cvObj.Email}
                 phone={cvObj.Phone}
-                schoolName={cvObj.SchoolName}
+                schoolName={cvObj['School Name']}
+                schoolStartDate={cvObj['School start date']}
                 handleNameInputChanges={handleNameInputChanges}
                 handleEmailInputChanges={handleEmailInputChanges}
                 handlePhoneInputChanges={handlePhoneInputChanges}
                 handleSchoolNameInputChanges={handleSchoolNameInputChanges}
+                handleSchoolStartDateInputChanges={handleSchoolStartDateInputChanges}
             />
         </>
     )

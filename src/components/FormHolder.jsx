@@ -2,16 +2,19 @@ import { NameInput } from "./NameInput"
 import { EmailInput } from "./EmailInput"
 import { PhoneInput } from "./PhoneInput"
 import { SchoolNameInput } from "./SchoolNameInput"
+import { SchoolStartDateInput } from "./SchoolStartDateInput"
 export function FormHolder(
     {
         name,
         email,
         phone,
         schoolName,
+        schoolStartDate,
         handleNameInputChanges,
         handleEmailInputChanges,
         handlePhoneInputChanges,
-        handleSchoolNameInputChanges
+        handleSchoolNameInputChanges,
+        handleSchoolStartDateInputChanges
     }
 ){
     return(
@@ -33,6 +36,10 @@ export function FormHolder(
             <SchoolNameInput
                 schoolName={schoolName}
                 handleSchoolNameInputChanges={handleSchoolNameInputChanges}
+            />
+            <SchoolStartDateInput
+                schoolStartDate={schoolStartDate}
+                handleSchoolStartDateInputChanges={handleSchoolStartDateInputChanges}
             />
             <h2>Work Experience</h2>
         </>
