@@ -1,14 +1,16 @@
 import { NameInput } from "./NameInput"
 import { EmailInput } from "./EmailInput"
+import { PhoneInput } from "./PhoneInput"
 export function FormHolder(
     {
         name,
         email,
+        phone,
         handleNameInputChanges,
-        handleEmailInputChanges
+        handleEmailInputChanges,
+        handlePhoneInputChanges
     }
 ){
-    console.log(handleEmailInputChanges)
     return(
         <>
             <h2>General Information</h2>
@@ -19,6 +21,10 @@ export function FormHolder(
             <EmailInput
                 email={email}
                 handleEmailInputChanges={handleEmailInputChanges}
+            />
+            <PhoneInput
+                phone={phone}
+                handlePhoneInputChanges={handlePhoneInputChanges}
             />
             <h2>Educational Information</h2>
             <h2>Work Experience</h2>

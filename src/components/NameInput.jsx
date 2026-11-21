@@ -1,5 +1,4 @@
 export function NameInput({name,handleNameInputChanges}){
-    console.log(handleNameInputChanges)
     return (
         <>
             <label htmlFor="nameInput">Name: </label>

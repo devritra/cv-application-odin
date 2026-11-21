@@ -4,7 +4,8 @@ import { FormHolder } from "./FormHolder"
 export function MainPage(){
     const cvTemplate = {
         Name: '',
-        Email: ''
+        Email: '',
+        Phone: ''
     }
     const [cvObj, setCvObj] = useState(cvTemplate);
     const handleNameInputChanges = (e) => {
@@ -13,8 +14,10 @@ export function MainPage(){
     const handleEmailInputChanges = (e) => {
         setCvObj({...cvObj, Email: e.target.value})
     }
+    const handlePhoneInputChanges = (e) => {
+        setCvObj({...cvObj, Phone: e.target.value})
+    }
     console.log(cvObj);
-    console.log(handleNameInputChanges);
     
     return(
         <>
@@ -22,8 +25,10 @@ export function MainPage(){
             <FormHolder
                 name={cvObj.Name}
                 email={cvObj.Email}
+                phone={cvObj.Phone}
                 handleNameInputChanges={handleNameInputChanges}
                 handleEmailInputChanges={handleEmailInputChanges}
+                handlePhoneInputChanges={handlePhoneInputChanges}
             />
         </>
     )
