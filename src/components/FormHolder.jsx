@@ -1,14 +1,4 @@
-import { NameInput } from "./NameInput"
-import { EmailInput } from "./EmailInput"
-import { PhoneInput } from "./PhoneInput"
-import { SchoolNameInput } from "./SchoolNameInput"
-import { SchoolStartDateInput } from "./SchoolStartDateInput"
-import { SchoolEndDateInput } from "./SchoolEndDate"
-import { CompanyNameInput } from "./CompanyNameInput"
-import { PositionTitleInput } from "./PositionTitleInput"
-import { CompanyResponsibilityInput } from "./CompanyResponsibilityInput"
-import { CompanyJoiningDateInput } from "./CompanyJoiningDateInput"
-import { CompanyExitDateInput } from "./CompanyExitDate"
+import { InputComponent } from "./InputComponent"
 export function FormHolder(
     {
         name,
@@ -42,51 +32,80 @@ export function FormHolder(
             {isActive?(
                 <>
                     <h2>General Information</h2>
-                    <NameInput
-                        name={name}
-                        handleNameInputChanges={handleNameInputChanges}
+                    <InputComponent
+                        label={'Name: '}
+                        inputId={'nameInput'}
+                        value={name}
+                        onChange={handleNameInputChanges}
                     />
-                    <EmailInput
-                        email={email}
-                        handleEmailInputChanges={handleEmailInputChanges}
+                    <InputComponent
+                        label={'Email: '}
+                        type={'email'}
+                        inputId={'emailInput'}
+                        value={email}
+                        onChange={handleEmailInputChanges}
                     />
-                    <PhoneInput
-                        phone={phone}
-                        handlePhoneInputChanges={handlePhoneInputChanges}
+                    <InputComponent
+                        label={'Phone: '}
+                        type={'tel'}
+                        inputId={'phoneInput'}
+                        value={phone}
+                        onChange={handlePhoneInputChanges}
                     />
                     <h2>Educational Information</h2>
-                    <SchoolNameInput
-                        schoolName={schoolName}
-                        handleSchoolNameInputChanges={handleSchoolNameInputChanges}
+                    <InputComponent
+                        label={'School Name: '}
+                        inputId={'schoolNameInput'}
+                        value={schoolName}
+                        onChange={handleSchoolNameInputChanges}
                     />
-                    <SchoolStartDateInput
-                        schoolStartDate={schoolStartDate}
-                        handleSchoolStartDateInputChanges={handleSchoolStartDateInputChanges}
+                    <InputComponent
+                        label={'School start date: '}
+                        type={'date'}
+                        inputId={'schoolStartDateInput'}
+                        value={schoolStartDate}
+                        onChange={handleSchoolStartDateInputChanges}
                     />
-                    <SchoolEndDateInput
-                        schoolEndDate={schoolEndDate}
-                        handleSchoolEndDateInputChanges={handleSchoolEndDateInputChanges}
+                    <InputComponent
+                        label={'School end date: '}
+                        type={'date'}
+                        inputId={'schoolEndDateInput'}
+                        value={schoolEndDate}
+                        onChange={handleSchoolEndDateInputChanges}
                     />
                     <h2>Work Experience</h2>
-                    <CompanyNameInput
-                        companyName={companyName}
-                        handleCompanyNameInputChanges={handleCompanyNameInputChanges}
+                    <InputComponent
+                        label={'Company Name: '}
+                        inputId={'companyNameInput'}
+                        value={companyName}
+                        onChange={handleCompanyNameInputChanges}
                     />
-                    <PositionTitleInput
-                        positionTitle={positionTitle}
-                        handlePositionTitleInputChanges={handlePositionTitleInputChanges}
+                    <InputComponent
+                        label={'Position Title: '}
+                        inputId={'positionTitleInput'}
+                        value={positionTitle}
+                        onChange={handlePositionTitleInputChanges}
                     />
-                    <CompanyResponsibilityInput
-                        companyResponsibility={companyResponsibility}
-                        handleCompanyResponsibilityInputChanges={handleCompanyResponsibilityInputChanges}
+                    <InputComponent
+                        label={'Main responsibilities you had in your company: '}
+                        inputId={'companyResponsibilityInput'}
+                        value={companyResponsibility}
+                        onChange={handleCompanyResponsibilityInputChanges}
+                        IsTextarea={true}
                     />
-                    <CompanyJoiningDateInput
-                        companyJoiningDate={companyJoiningDate}
-                        handleCompanyJoiningDateInputChanges={handleCompanyJoiningDateInputChanges}
+                    <InputComponent
+                        label={'You joined on: '}
+                        type={'date'}
+                        inputId={'companyJoiningDateInput'}
+                        value={companyJoiningDate}
+                        onChange={handleCompanyJoiningDateInputChanges}
                     />
-                    <CompanyExitDateInput
-                        companyExitDate={companyExitDate}
-                        handleCompanyExitDateInputChanges={handleCompanyExitDateInputChanges}
+                    <InputComponent
+                        label={'You left on: '}
+                        type={'date'}
+                        inputId={'companyExitDateInput'}
+                        value={companyExitDate}
+                        onChange={handleCompanyExitDateInputChanges}
                     />
                     <button onClick={handleSubmit}>Submit</button>
                 </>
