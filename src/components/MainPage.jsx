@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { FormHolder } from "./FormHolder"
+import { Display } from "./Display";
 
 export function MainPage(){
     const cvTemplate = {
@@ -16,6 +17,7 @@ export function MainPage(){
         'Company exit date': ''
     }
     const [cvObj, setCvObj] = useState(cvTemplate);
+    const [activeIndex, setActiveIndex] = useState(0);
     const handleNameInputChanges = (e) => {
         setCvObj({...cvObj, Name: e.target.value})
     }
@@ -49,6 +51,9 @@ export function MainPage(){
     const handleCompanyExitDateInputChanges = (e) => {
         setCvObj({...cvObj, 'Company exit date': e.target.value})
     }
+    const handleSubmit = () => {
+        setActiveIndex(1);
+    }
     console.log(cvObj);
     
     return(
@@ -77,6 +82,12 @@ export function MainPage(){
                 handleCompanyResponsibilityInputChanges={handleCompanyResponsibilityInputChanges}
                 handleCompanyJoiningDateInputChanges={handleCompanyJoiningDateInputChanges}
                 handleCompanyExitDateInputChanges={handleCompanyExitDateInputChanges}
+                isActive={activeIndex === 0}
+                handleSubmit={handleSubmit}
+            />
+            <Display
+                cvObj={cvObj}
+                isActive={activeIndex === 1}
             />
         </>
     )

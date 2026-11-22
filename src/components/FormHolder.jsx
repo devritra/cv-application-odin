@@ -32,58 +32,65 @@ export function FormHolder(
         handlePositionTitleInputChanges,
         handleCompanyResponsibilityInputChanges,
         handleCompanyJoiningDateInputChanges,
-        handleCompanyExitDateInputChanges
+        handleCompanyExitDateInputChanges,
+        isActive,
+        handleSubmit
     }
 ){
     return(
-        <>
-            <h2>General Information</h2>
-            <NameInput
-                name={name}
-                handleNameInputChanges={handleNameInputChanges}
-            />
-            <EmailInput
-                email={email}
-                handleEmailInputChanges={handleEmailInputChanges}
-            />
-            <PhoneInput
-                phone={phone}
-                handlePhoneInputChanges={handlePhoneInputChanges}
-            />
-            <h2>Educational Information</h2>
-            <SchoolNameInput
-                schoolName={schoolName}
-                handleSchoolNameInputChanges={handleSchoolNameInputChanges}
-            />
-            <SchoolStartDateInput
-                schoolStartDate={schoolStartDate}
-                handleSchoolStartDateInputChanges={handleSchoolStartDateInputChanges}
-            />
-            <SchoolEndDateInput
-                schoolEndDate={schoolEndDate}
-                handleSchoolEndDateInputChanges={handleSchoolEndDateInputChanges}
-            />
-            <h2>Work Experience</h2>
-            <CompanyNameInput
-                companyName={companyName}
-                handleCompanyNameInputChanges={handleCompanyNameInputChanges}
-            />
-            <PositionTitleInput
-                positionTitle={positionTitle}
-                handlePositionTitleInputChanges={handlePositionTitleInputChanges}
-            />
-            <CompanyResponsibilityInput
-                companyResponsibility={companyResponsibility}
-                handleCompanyResponsibilityInputChanges={handleCompanyResponsibilityInputChanges}
-            />
-            <CompanyJoiningDateInput
-                companyJoiningDate={companyJoiningDate}
-                handleCompanyJoiningDateInputChanges={handleCompanyJoiningDateInputChanges}
-            />
-            <CompanyExitDateInput
-                companyExitDate={companyExitDate}
-                handleCompanyExitDateInputChanges={handleCompanyExitDateInputChanges}
-            />
+        <>  
+            {isActive?(
+                <>
+                    <h2>General Information</h2>
+                    <NameInput
+                        name={name}
+                        handleNameInputChanges={handleNameInputChanges}
+                    />
+                    <EmailInput
+                        email={email}
+                        handleEmailInputChanges={handleEmailInputChanges}
+                    />
+                    <PhoneInput
+                        phone={phone}
+                        handlePhoneInputChanges={handlePhoneInputChanges}
+                    />
+                    <h2>Educational Information</h2>
+                    <SchoolNameInput
+                        schoolName={schoolName}
+                        handleSchoolNameInputChanges={handleSchoolNameInputChanges}
+                    />
+                    <SchoolStartDateInput
+                        schoolStartDate={schoolStartDate}
+                        handleSchoolStartDateInputChanges={handleSchoolStartDateInputChanges}
+                    />
+                    <SchoolEndDateInput
+                        schoolEndDate={schoolEndDate}
+                        handleSchoolEndDateInputChanges={handleSchoolEndDateInputChanges}
+                    />
+                    <h2>Work Experience</h2>
+                    <CompanyNameInput
+                        companyName={companyName}
+                        handleCompanyNameInputChanges={handleCompanyNameInputChanges}
+                    />
+                    <PositionTitleInput
+                        positionTitle={positionTitle}
+                        handlePositionTitleInputChanges={handlePositionTitleInputChanges}
+                    />
+                    <CompanyResponsibilityInput
+                        companyResponsibility={companyResponsibility}
+                        handleCompanyResponsibilityInputChanges={handleCompanyResponsibilityInputChanges}
+                    />
+                    <CompanyJoiningDateInput
+                        companyJoiningDate={companyJoiningDate}
+                        handleCompanyJoiningDateInputChanges={handleCompanyJoiningDateInputChanges}
+                    />
+                    <CompanyExitDateInput
+                        companyExitDate={companyExitDate}
+                        handleCompanyExitDateInputChanges={handleCompanyExitDateInputChanges}
+                    />
+                    <button onClick={handleSubmit}>Submit</button>
+                </>
+            ):('')}
         </>
     )
 }
