@@ -28,7 +28,7 @@ export function FormHolder(
     }
 ){
     return(
-        <>  
+        <form>  
             {isActive?(
                 <>
                     <h2>General Information</h2>
@@ -107,9 +107,9 @@ export function FormHolder(
                         value={companyExitDate}
                         onChange={handleCompanyExitDateInputChanges}
                     />
-                    <button onClick={handleSubmit}>Submit</button>
+                    <input type="submit" onClick={handleSubmit}/>
                 </>
             ):('')}
-        </>
+        </form>
     )
 }

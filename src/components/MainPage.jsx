@@ -51,7 +51,8 @@ export function MainPage(){
     const handleCompanyExitDateInputChanges = (e) => {
         setCvObj({...cvObj, 'Company exit date': e.target.value})
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setActiveIndex(1);
     }
     const handleEdit = () => {
