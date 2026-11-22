@@ -54,6 +54,9 @@ export function MainPage(){
     const handleSubmit = () => {
         setActiveIndex(1);
     }
+    const handleEdit = () => {
+        setActiveIndex(0);
+    }
     console.log(cvObj);
     
     return(
@@ -88,6 +91,7 @@ export function MainPage(){
             <Display
                 cvObj={cvObj}
                 isActive={activeIndex === 1}
+                handleEdit={handleEdit}
             />
         </>
     )

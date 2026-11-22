@@ -1,4 +1,4 @@
-export function Display({cvObj,isActive}){
+export function Display({cvObj,isActive, handleEdit}){
     return(
         <>
             {isActive?(
@@ -28,6 +28,7 @@ export function Display({cvObj,isActive}){
                     <p>{cvObj['Company joining date']}</p>
                     <p>Worked till: </p>
                     <p>{cvObj['Company exit date']}</p>
+                    <button onClick={handleEdit}>Edit</button>
                 </section>
             ):('')}
         </>
