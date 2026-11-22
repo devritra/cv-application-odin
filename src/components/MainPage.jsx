@@ -61,7 +61,7 @@ export function MainPage(){
     console.log(cvObj);
     
     return(
-        <>
+        <div className="mainPage">
             <h1>CV Application</h1>
             <FormHolder
                 name={cvObj.Name}
@@ -94,6 +94,6 @@ export function MainPage(){
                 isActive={activeIndex === 1}
                 handleEdit={handleEdit}
             />
-        </>
+        </div>
     )
 }

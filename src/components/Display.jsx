@@ -2,7 +2,7 @@ export function Display({cvObj,isActive, handleEdit}){
     return(
         <>
             {isActive?(
-                <section>
+                <section className="display">
                     <h2>General Information</h2>
                     <p>Name: </p>
                     <p>{cvObj.Name}</p>
